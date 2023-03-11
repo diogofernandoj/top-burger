@@ -10,22 +10,26 @@ const Header = () => {
       <ul>
         <li>
           <NavLink to="/">
-            <FaHamburger />
+            <FaHamburger size="1.5rem" />
+            <span>Lanches</span>
           </NavLink>
         </li>
         <li>
           <NavLink to="/pizzas">
-            <FaPizzaSlice />
+            <FaPizzaSlice size="1.5rem" />
+            <span>Pizzas</span>
           </NavLink>
         </li>
         <li>
           <NavLink to="/drinks">
-            <FaGlassMartiniAlt />
+            <FaGlassMartiniAlt size="1.5rem" />
+            <span>Bebidas</span>
           </NavLink>
         </li>
         <li>
           <NavLink to="/desserts">
-            <FaIceCream />
+            <FaIceCream size="1.5rem" />
+            <span>Sobremesas</span>
           </NavLink>
         </li>
       </ul>

@@ -2,15 +2,16 @@ import { BrowserRouter } from "react-router-dom";
 
 import RouterApp from "./routes";
 
-import "./App.css";
-import Header from "./components/Header";
+import { Theme } from "./styles/Theme";
+import { GlobalStyle } from "./styles/global";
 
-const App = () => {
+export default function App() {
   return (
     <BrowserRouter>
-      <RouterApp />
+      <Theme>
+        <RouterApp />
+        <GlobalStyle />
+      </Theme>
     </BrowserRouter>
   );
-};
-
-export default App;
+}

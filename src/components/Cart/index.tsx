@@ -2,14 +2,14 @@ import { MdClose } from "react-icons/md";
 
 import { CartBox, CartContainer } from "./styles";
 
-const Cart = () => {
+const Cart = ({ setShowCart }) => {
   return (
-    <CartContainer>
+    <CartContainer id="cart-container" onClick={(e) => e.target.id == "cart-container" && setShowCart(false)}>
       <CartBox>
-        <button>
+        <h2>Seu carrinho</h2>
+        <button onClick={() => setShowCart(false)}>
           <MdClose />
         </button>
-        <h2>Seu carrinho</h2>
       </CartBox>
     </CartContainer>
   );

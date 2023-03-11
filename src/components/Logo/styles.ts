@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const LogoContainer = styled.div`
+  margin: 1.5rem auto;
   width: 160px;
-  margin: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
 
   display: flex;
 
   span {
-    color: #ff0;
+    color: ${({ theme }) => theme.colors.yellow};
   }
 `;

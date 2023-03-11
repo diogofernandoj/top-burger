@@ -1,27 +1,41 @@
 import styled from "styled-components";
 
 export const SnacksContainer = styled.div`
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1rem;
   padding: 1rem;
 `;
 
 export const Snack = styled.div`
-  height: 340px;
-  width: 290px;
+  width: 100%;
 
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.black};
 
   padding: 1rem;
+  border-radius: 1rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  cursor: pointer;
+
   position: relative;
+
+  h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  span {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
 `;
 
 export const Quantity = styled.div`
@@ -32,8 +46,8 @@ export const Quantity = styled.div`
   left: -0.75rem;
 
   font-weight: 700;
-  background-color: #cc092f;
-  color: #fff;
+  background-color: ${({ theme }) => theme.colors.red};
+  color: ${({ theme }) => theme.colors.white};
   padding: 1rem;
   border-radius: 50%;
 
@@ -43,45 +57,13 @@ export const Quantity = styled.div`
 `;
 
 export const Details = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  h2 {
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-  }
-`;
-
-export const Info = styled.div`
-  margin: 2rem 0;
-  width: 95%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
 
-  span {
-    font-weight: 500;
-    font-size: 1.2rem;
-  }
-
-  button {
-    height: 2rem;
-    width: 2rem;
-    border: none;
-    background: none;
-    color: #cc092f;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer;
-  }
+export const Description = styled.div`
+  color: ${({ theme }) => theme.colors.gray500};
+  font-size: 0.9rem;
 `;
